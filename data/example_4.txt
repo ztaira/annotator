@@ -1,0 +1,67 @@
+Prompt: Write a Python function to perform binary search on a sorted list.
+Response:
+```python
+def binary_search(arr: list, target: int) -> int:
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+```
+
+Prompt: Write a Python function to find the mode of a list of numbers.
+Response:
+```python
+from collections import Counter
+
+def find_mode(numbers: list) -> int:
+    count = Counter(numbers)
+    return max(count, key=count.get)
+```
+
+Prompt: Write a Python function to convert a decimal number to binary.
+Response:
+```python
+def decimal_to_binary(n: int) -> str:
+    return bin(n).replace("0b", "")
+```
+
+Prompt: Write a Python function to check if a number is prime.
+Response:
+```python
+def is_prime(n: int) -> bool:
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+```
+
+Prompt: Write a Python function to find the sum of digits of a number.
+Response:
+```python
+def sum_of_digits(n: int) -> int:
+    return sum(int(digit) for digit in str(n))
+```
+
+Prompt: Write a Python function to find the length of the longest substring without repeating characters.
+Response:
+```python
+def longest_unique_substring(s: str) -> int:
+    char_set = set()
+    left = 0
+    max_length = 0
+    for right in range(len(s)):
+        while s[right] in char_set:
+            char_set.remove(s[left])
+            left += 1
+        char_set.add(s[right])
+        max_length = max(max_length, right - left + 1)
+    return max_length
+```

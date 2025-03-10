@@ -1,0 +1,32 @@
+[
+    {
+        "start_line": 1,
+        "end_line": 10,
+        "file_name": "data/example_1.txt",
+        "line_hash": "d03445be05077292fd20651cf0612545"
+    },
+    {
+        "start_line": 11,
+        "end_line": 20,
+        "file_name": "data/example_2.txt",
+        "line_hash": "23d077be62d7a6d0be2481210171bb33"
+    },
+    {
+        "start_line": 21,
+        "end_line": 30,
+        "file_name": "data/example_3.txt",
+        "line_hash": "076ef3b1041ff02a6d790ecfc8956fdb"
+    },
+    {
+        "start_line": 31,
+        "end_line": 40,
+        "file_name": "data/example_4.txt",
+        "line_hash": "a159ae89a313ff1d461d4c186640e26c"
+    },
+    {
+        "start_line": 41,
+        "end_line": 50,
+        "file_name": "data/example_5.txt",
+        "line_hash": "3c36f12ad0ebcb9ad20a2049f2fdd7f7"
+    }
+]

@@ -1,0 +1,59 @@
+Prompt: Write a Python function to calculate the factorial of a number.
+Response:
+```python
+def factorial(n: int) -> int:
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+```
+
+Prompt: Write a Python function to check if a string is a palindrome.
+Response:
+```python
+def is_palindrome(s: str) -> bool:
+    return s == s[::-1]
+```
+
+Prompt: Write a Python function to merge two sorted lists.
+Response:
+```python
+def merge_sorted_lists(list1: list, list2: list) -> list:
+    merged_list = []
+    i = j = 0
+    while i < len(list1) and j < len(list2):
+        if list1[i] < list2[j]:
+            merged_list.append(list1[i])
+            i += 1
+        else:
+            merged_list.append(list2[j])
+            j += 1
+    merged_list.extend(list1[i:])
+    merged_list.extend(list2[j:])
+    return merged_list
+```
+
+Prompt: Write a Python function to find the greatest common divisor (GCD) of two numbers.
+Response:
+```python
+def gcd(a: int, b: int) -> int:
+    while b:
+        a, b = b, a % b
+    return a
+```
+
+Prompt: Write a Python function to perform binary search on a sorted list.
+Response:
+```python
+def binary_search(arr: list, target: int) -> int:
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+```

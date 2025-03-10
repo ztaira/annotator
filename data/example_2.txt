@@ -1,0 +1,86 @@
+Prompt: Write a Python function to check if a string is a palindrome.
+Response:
+```python
+def is_palindrome(s: str) -> bool:
+    return s == s[::-1]
+```
+
+Prompt: Write a Python function to find the largest number in an array.
+Response:
+```python
+def find_largest_number(arr: list) -> int:
+    return max(arr)
+```
+
+Prompt: Write a Python function to count the number of employees in each department.
+Response:
+```python
+from collections import Counter
+
+def count_employees_by_department(employees: list) -> dict:
+    departments = [employee['department'] for employee in employees]
+    return dict(Counter(departments))
+```
+
+Prompt: Write a Python function to find the Fibonacci sequence up to a given number.
+Response:
+```python
+def fibonacci(n: int) -> list:
+    sequence = []
+    a, b = 0, 1
+    while a <= n:
+        sequence.append(a)
+        a, b = b, a + b
+    return sequence
+```
+
+Prompt: Write a Python function to find the intersection of two lists.
+Response:
+```python
+def intersection(list1: list, list2: list) -> list:
+    return list(set(list1) & set(list2))
+```
+
+Prompt: Write a Python function to find the longest common prefix among a list of strings.
+Response:
+```python
+def longest_common_prefix(strs: list) -> str:
+    if not strs:
+        return ""
+    prefix = strs[0]
+    for s in strs[1:]:
+        while s[:len(prefix)] != prefix:
+            prefix = prefix[:len(prefix)-1]
+            if not prefix:
+                return ""
+    return prefix
+```
+
+Prompt: Write a Python function to generate all permutations of a list.
+Response:
+```python
+from itertools import permutations
+
+def generate_permutations(lst: list) -> list:
+    return list(permutations(lst))
+```
+
+Prompt: Write a Python function to check if two strings are anagrams.
+Response:
+```python
+def are_anagrams(s1: str, s2: str) -> bool:
+    return sorted(s1) == sorted(s2)
+```
+
+Prompt: Write a Python function to find the first non-repeating character in a string.
+Response:
+```python
+def first_non_repeating_char(s: str) -> str:
+    char_count = {}
+    for char in s:
+        char_count[char] = char_count.get(char, 0) + 1
+    for char in s:
+        if char_count[char] == 1:
+            return char
+    return ""
+```

@@ -1,0 +1,48 @@
+Prompt: Write a Python function to check if two strings are anagrams.
+Response:
+```python
+def are_anagrams(s1: str, s2: str) -> bool:
+    return sorted(s1) == sorted(s2)
+```
+
+Prompt: Write a Python function to find the sum of all even numbers in a list.
+Response:
+```python
+def sum_even_numbers(numbers: list) -> int:
+    return sum(num for num in numbers if num % 2 == 0)
+```
+
+Prompt: Write a Python function to count the number of vowels in a string.
+Response:
+```python
+def count_vowels(s: str) -> int:
+    vowels = "aeiouAEIOU"
+    return sum(1 for char in s if char in vowels)
+```
+
+Prompt: Write a Python function to find the second largest number in a list.
+Response:
+```python
+def second_largest(numbers: list) -> int:
+    first, second = float('-inf'), float('-inf')
+    for num in numbers:
+        if num > first:
+            first, second = num, first
+        elif first > num > second:
+            second = num
+    return second
+```
+
+Prompt: Write a Python function to convert a string to title case.
+Response:
+```python
+def to_title_case(s: str) -> str:
+    return s.title()
+```
+
+Prompt: Write a Python function to check if a number is a perfect square.
+Response:
+```python
+def is_perfect_square(n: int) -> bool:
+    return int(n**0.5)**2 == n
+```
